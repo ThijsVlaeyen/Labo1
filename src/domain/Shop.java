@@ -1,11 +1,12 @@
+package domain;
 
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
 
-//test
 public class Shop {
+
 private ArrayList<String> productTitles;
 private ArrayList<String> productTypes;
 private ArrayList<String> productIds;
