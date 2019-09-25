@@ -91,19 +91,19 @@ public class Shop {
 
    public void readProductsFromTxt(String path){
        File productfile = new File(path);
+       List<String> products = new ArrayList<>();
        try{
            Scanner fileScanner = new Scanner(productfile);
            fileScanner.useDelimiter("==================");
-           List<String> products = new ArrayList<>();
+
            while (fileScanner.hasNext()){
                products.add(fileScanner.next());
            }
-           List<String> products2 = new ArrayList<>();
            for (int i = 0; i <products.size() ; i++) {
-               products2.add(products.get(i).replaceAll("\\r", ""));
+               products.set(i,products.get(i).replaceAll("\\r", ""));
            }
-           for (int i = 0; i <products2.size() ; i++) {
-               String[] product = products2.get(i).split("\\n|:");
+           for (int i = 0; i <products.size() ; i++) {
+               String[] product = products.get(i).split("\\n|:");
                if (product.length>5) {
                    product = removeEmpty(product);
                    String type = String.valueOf(product[1].charAt(1));
@@ -112,7 +112,6 @@ public class Shop {
                    this.addProduct(id, name, type);
                }
            }
-           System.out.println(products2);
        } catch (FileNotFoundException e) {
            e.printStackTrace();
        }
