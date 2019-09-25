@@ -14,7 +14,7 @@ public abstract class Product implements Comparable<Product>{
       this.name = name;
    }
 
-   public int getId(){
+    public int getId(){
       return this.id;
    }
 

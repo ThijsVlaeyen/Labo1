@@ -8,7 +8,7 @@ public class Movie extends Product{
 
    @Override
    public int getPrice(int days){
-      return (days-3) * 2;
+      return (days-3)>0? (days-3) * 2:0;
    }
 
    @Override

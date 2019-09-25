@@ -1,0 +1,35 @@
+
+Type: Movie
+ID: 3
+Name: movie1
+==================
+
+Type: Movie
+ID: 4
+Name: movie2
+==================
+
+Type: Game
+ID: 2
+Name: game3
+==================
+
+Type: Game
+ID: 5
+Name: game1
+==================
+
+Type: Game
+ID: 6
+Name: game2
+==================
+
+Type: CD
+ID: 1
+Name: cd2
+==================
+
+Type: CD
+ID: 7
+Name: cd1
+==================
