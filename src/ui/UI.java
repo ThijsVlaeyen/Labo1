@@ -28,12 +28,10 @@ public class UI {
     public void ShowProduct(Shop shop)
     {
         String id = JOptionPane.showInputDialog("Enter the id:");
-        int x = Integer.parseInt(id);
-        Product[] array;
-        array = (Product[]) shop.products.toArray();
-        for (Product product : array)
+        int newId = Integer.parseInt(id);
+        for (Product product : shop.getProducts())
         {
-            if(product.getId() == x)
+            if(product.getId() == newId)
             {
                 JOptionPane.showMessageDialog(null, "something");
             }
