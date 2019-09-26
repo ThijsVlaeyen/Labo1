@@ -27,7 +27,7 @@ public class Shop {
       products.add(product);
    }
 
-   public void addProduct(int id,String name,String type){
+   private void addProduct(int id,String name,String type){
        Product product;
        if (type.equalsIgnoreCase("g")){
            product = new Game(id, name);
