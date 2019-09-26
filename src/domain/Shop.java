@@ -49,6 +49,14 @@ public class Shop {
       return out;
    }
 
+   public Product[] getProducts(){
+       Product[] newProducts = new Product[0];
+       for (Product p:this.products) {
+           newProducts = add(newProducts,p);
+       }
+       return newProducts;
+   }
+
    public String productById(int id){
       if (id <= 0 || id > products.size()){
          throw new IllegalArgumentException("Asked ID is not available");
@@ -135,6 +143,17 @@ public class Shop {
         items[items.length-1] = item;
         return items;
     }
+
+    private Product[] add(Product[] list, Product item){
+        Product[] items = new Product[list.length+1];
+        for (int i = 0; i < list.length; i++) {
+            items[i] = list[i];
+        }
+        items[items.length-1] = item;
+        return items;
+    }
+
+
 
 
 }
